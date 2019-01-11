@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+    <title>pluto solutions</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="@Url.Content("~/Content/")logo/pluto-solutions-logo-blue.png" />
+    @Styles.Render("~/Content/plutosolutionscss")
+    @Scripts.Render("~/bundles/plutosolutionsjs")
+    @RenderSection("head", required: false)
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="logo">
+                <h1><a href="http://www.plutosols.com"><span>pluto</span> solutions<small>Together, Create the future</small></a></h1>
+            </div>
+            <div class="menu_nav">
+                <ul>
+                    <li @((ViewContext.RouteData.Values["controller"].ToString().Equals("Home")) ? "class=active" : "")><a href="@Url.Action("Index", "Home")">Overview</a></li>
+                    <li @((ViewContext.RouteData.Values["controller"].ToString().Equals("BuyWrite")) ? "class=active" : "")><a href="@Url.Action("Index", "BuyWrite")">Buy-Write</a></li>
+                    <li @((ViewContext.RouteData.Values["controller"].ToString().Equals("TaxableBond")) ? "class=active" : "")><a href="@Url.Action("Index", "TaxableBond")">Taxable Bond</a></li>
+                    <li @((ViewContext.RouteData.Values["controller"].ToString().Equals("TaxFreeBond")) ? "class=active" : "")><a href="@Url.Action("Index", "TaxFreeBond")">Tax-Free Bond</a></li>
+                    <li @((ViewContext.RouteData.Values["controller"].ToString().Equals("Foreign")) ? "class=active" : "")><a href="@Url.Action("Index", "Foreign")">Foreign</a></li>
+                    <li @((ViewContext.RouteData.Values["controller"].ToString().Equals("Equity")) ? "class=active" : "")><a href="@Url.Action("Index", "Equity")">Equity</a></li>
+                </ul>
+                <div class="clr"></div>
+            </div>
+        </div>
+        <div class="content">
+            @RenderBody()
+        </div>
+        @Scripts.Render("~/bundles/plutosolutionsbottomjs")
+        <hr />
+        <div class="footer">
+            <div class="footer_resize">
+                <div class="media">
+                    <div class="pull-left">
+                        <script src="https://www.trustmarkthai.com/callbackData/initialize.js?t=beff85586-29-5-f949f06f6520b618e84835254eaec63acdf0" id="dbd-init"></script><div id="Certificate-banners" style="height:64px;"></div>
+                    </div>
+                    <div class="media-body">
+                        <a href="http://www.plutosols.com">See more services at www.plutosols.com</a>
+                    </div>
+                    <div class="media-right">
+                        <a href="@Url.Action("Index", "Home")">
+                            <img class="media-object" src="@Url.Content("~/Content/")logo/pluto_solutions_logo_blue.png" width="64" height="64" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>pluto solutions</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="@Url.Content("~/Content/")logo/pluto-solutions-logo-blue.png" />
+    @Styles.Render("~/Content/plutosolutionscss")
+    @Scripts.Render("~/bundles/plutosolutionsjs")
+</head>
+<body>
+    <h2>@ViewBag.Header</h2>
+    <div style="width:100%;"><canvas id="canvas"></canvas></div>
+    @Scripts.Render("~/bundles/plutosolutionsbuywritemonth")
+</body>
+</html>

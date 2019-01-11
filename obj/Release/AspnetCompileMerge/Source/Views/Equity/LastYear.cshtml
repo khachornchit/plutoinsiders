@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = ViewBag.Header;
+}
+<div style="padding-bottom:15px;">
+    <a style="padding-right:15px;" href="@Url.Action("Index","Equity")">Recent Performance</a>
+    <a style="padding-right:15px;" href="@Url.Action("LastMonth","Equity")">1-Month Performance</a>
+    <a style="padding-right:15px;" href="@Url.Action("LastYear","Equity")">YLD Performance</a>
+</div>
+<h2>@ViewBag.Header</h2>
+<div style="width:100%;"><canvas id="canvas"></canvas></div>
+@Scripts.Render("~/bundles/plutosolutionsequityyear")
